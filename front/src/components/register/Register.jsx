@@ -14,7 +14,7 @@ const Register = () => {
   const getData = async (email, password) => {
     try {
       const response = await Axios.post(
-        "http://api.egames.lafuentedanel.com/api/users/register",
+        "https://api.egames.lafuentedanel.com/api/users/register",
         {
           email,
           password,
@@ -81,7 +81,7 @@ const Register = () => {
           <button type="submit">Registrarse</button>
         </form>
         <p>{requestError}</p>
-        <a href="http://api.egames.lafuentedanel.com/api/auth/google">
+        <a href="https://api.egames.lafuentedanel.com/api/auth/google">
           Registrarse con Google
         </a>
       </div>
