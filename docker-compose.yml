@@ -49,6 +49,7 @@ services:
       - node
     networks:
       - egames
+      - proxy
     volumes:
       - /home/ubuntu/egames:/usr/share/nginx/html:ro
 volumes:
