@@ -21,7 +21,7 @@ const Profile = () => {
       }
       const token = JSON.parse(infoUser).token;
       const response = await axios.get(
-        "http://localhost:3011/api/users/id",
+        "http://api.egames.lafuentedanel.com/api/users/id",
 
         {
           headers: { "x-access-token": token },
@@ -48,7 +48,7 @@ const Profile = () => {
       }
       const token = JSON.parse(infoUser).token;
       const response = await axios.post(
-        "http://localhost:3011/api/users/info",
+        "http://api.egames.lafuentedanel.com/api/users/info",
         {
           name: e.target.name.value,
           lastname: e.target.lastname.value,
@@ -80,7 +80,7 @@ const Profile = () => {
       }
       const token = JSON.parse(infoUser).token;
       const response = await axios.put(
-        "http://localhost:3011/api/users/edit",
+        "http://api.egames.lafuentedanel.com/api/users/edit",
         {
           name: e.target.name.value,
           lastname: e.target.lastname.value,

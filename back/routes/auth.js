@@ -35,7 +35,7 @@ authRouter.get(
       { expiresIn: "12h" }
     );
     res.redirect(
-      `http://localhost:3000/login?token=${token}&id=${user.iduser}`
+      `http://egames.lafuentedanel.com/login?token=${token}&id=${user.iduser}`
     );
   }
 );

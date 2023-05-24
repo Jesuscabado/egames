@@ -23,7 +23,7 @@ const GameDescription = ({ game, show, handleClose }) => {
       }
       const token = JSON.parse(infoUser).token;
       const response = await axios.post(
-        "http://localhost:3011/api/orders/user/add",
+        "http://api.egames.lafuentedanel.com/api/orders/user/add",
         { idgame, quantity, platform },
         {
           headers: { "x-access-token": token },

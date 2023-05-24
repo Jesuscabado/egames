@@ -23,7 +23,7 @@ const Orders = () => {
       }
       const token = JSON.parse(infoUser).token;
       const response = await axios.get(
-        "http://localhost:3011/api/orders/user/history",
+        "http://api.egames.lafuentedanel.com/api/orders/user/history",
         { headers: { "x-access-token": token } }
       );
       console.log("LOS DATOS de orders: ", response);
@@ -55,7 +55,7 @@ const Orders = () => {
       const token = JSON.parse(infoUser).token;
       const route = subtract ? "subtract" : "add";
       const response = await axios.post(
-        `http://localhost:3011/api/orders/user/${route}`,
+        `http://api.egames.lafuentedanel.com/api/orders/user/${route}`,
         { idgame, quantity, platform },
         {
           headers: { "x-access-token": token },

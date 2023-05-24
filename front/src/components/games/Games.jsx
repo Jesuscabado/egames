@@ -38,7 +38,7 @@ const Games = ({ refTo }) => {
   }, [searchWord]);
 
   const getData = async () => {
-    const response = await Axios.get("http://localhost:3011/api/games");
+    const response = await Axios.get("http://api.egames.lafuentedanel.com/api/games");
     console.log(response);
     setGames(response.data);
   };

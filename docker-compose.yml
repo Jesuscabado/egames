@@ -21,28 +21,39 @@ services:
     build: ./back
     container_name: node-egames
     restart: always
-    ports:
-      - 3011:3000
+    environment:
+      - VIRTUAL_HOST=api.egames.lafuentedanel.com
+      - VIRTUAL_PORT=80
+      - LETSENCRYPT_HOST=api.egames.lafuentedanel.com
+      - LETSENCRYPT_EMAIL=admin@lafuentedanel.com
     depends_on:
       - mysql
     networks:
       - egames
+      - proxy
     volumes:
       - ./back:/usr/src/app
       - exclude:/usr/src/app/node_modules/
   react:
-    build: ./front
+    image : nginx:alpine
     container_name: react-egames
     restart: always
-    ports:
-      - 3000:3000
+    environment:
+      - VIRTUAL_HOST=egames.lafuentedanel.com
+      - VIRTUAL_PORT=80
+      - LETSENCRYPT_HOST=egames.lafuentedanel.com
+      - LETSENCRYPT_EMAIL=admin@lafuentedanel.com
+    expose:
+      - 80
     depends_on:
       - node
     networks:
       - egames
     volumes:
-      - ./front:/usr/src/app
-volumes:
+      - /home/ubuntu/egames:/usr/share/nginx/html:ro
   exclude:
 networks:
   egames:
+  proxy:
+    name: nginx-proxy
+    external: true
