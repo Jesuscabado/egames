@@ -7,8 +7,6 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: mi-contraseña
       MYSQL_DATABASE: egames
-    ports:
-      - 3311:3306
     volumes:
       - "./docker/mysql/mysql.cnf:/etc/mysql/conf.d/mysql.cnf"
       - "./docker/mysql/1egames.sql:/docker-entrypoint-initdb.d/1egames.sql"
