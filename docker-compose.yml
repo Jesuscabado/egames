@@ -49,6 +49,7 @@ services:
       - egames
     volumes:
       - /home/ubuntu/egames:/usr/share/nginx/html:ro
+volumes:
   exclude:
 networks:
   egames:
