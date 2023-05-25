@@ -23,7 +23,7 @@ const GameDescription = ({ game, show, handleClose }) => {
       }
       const token = JSON.parse(infoUser).token;
       const response = await axios.post(
-        "http://api.hyruleshop.jesuscabado.com/api/orders/user/add",
+        "https://api.hyruleshop.jesuscabado.com/api/orders/user/add",
         { idgame, quantity, platform },
         {
           headers: { "x-access-token": token },
