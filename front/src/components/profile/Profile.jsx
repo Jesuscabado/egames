@@ -21,7 +21,7 @@ const Profile = () => {
       }
       const token = JSON.parse(infoUser).token;
       const response = await axios.get(
-        "https://api.egames.lafuentedanel.com/api/users/id",
+        "https://api.hyruleshop.jesuscabado.com/api/users/id",
 
         {
           headers: { "x-access-token": token },
@@ -48,7 +48,7 @@ const Profile = () => {
       }
       const token = JSON.parse(infoUser).token;
       const response = await axios.post(
-        "https://api.egames.lafuentedanel.com/api/users/info",
+        "https://api.hyruleshop.jesuscabado.com/api/users/info",
         {
           name: e.target.name.value,
           lastname: e.target.lastname.value,
@@ -80,7 +80,7 @@ const Profile = () => {
       }
       const token = JSON.parse(infoUser).token;
       const response = await axios.put(
-        "https://api.egames.lafuentedanel.com/api/users/edit",
+        "https://api.hyruleshop.jesuscabado.com/api/users/edit",
         {
           name: e.target.name.value,
           lastname: e.target.lastname.value,

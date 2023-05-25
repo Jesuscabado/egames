@@ -23,7 +23,7 @@ const Login = () => {
   const getData = async (email, password) => {
     try {
       const response = await Axios.post(
-        "https://api.egames.lafuentedanel.com/api/auth/login",
+        "https://api.hyruleshop.jesuscabado.com/api/auth/login",
         {
           email,
           password,
@@ -68,7 +68,7 @@ const Login = () => {
           <br />
           <button>Iniciar sesión</button>
         </form>
-        <a href="https://api.egames.lafuentedanel.com/api/auth/google">
+        <a href="https://api.hyruleshop.jesuscabado.com/api/auth/google">
           Iniciar sesión con Google
         </a>
         <br />

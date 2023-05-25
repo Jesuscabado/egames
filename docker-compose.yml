@@ -12,7 +12,7 @@ services:
       - "./docker/mysql/1egames.sql:/docker-entrypoint-initdb.d/1egames.sql"
       - "./docker/mysql/2egamesInsertData.sql:/docker-entrypoint-initdb.d/2egamesInsertData.sql"
       - "./docker/mysql/3egamesStockData.sql:/docker-entrypoint-initdb.d/3egamesStockData.sql"
-      - ~/egamesData/mysql:/var/lib/mysql
+      - ~/hyruleShopData/mysql:/var/lib/mysql
     networks:
       - egames
   node:
@@ -20,10 +20,10 @@ services:
     container_name: node-egames
     restart: always
     environment:
-      - VIRTUAL_HOST=api.egames.lafuentedanel.com
+      - VIRTUAL_HOST=api.hyruleshop.jesuscabado.com
       - VIRTUAL_PORT=3000
-      - LETSENCRYPT_HOST=api.egames.lafuentedanel.com
-      - LETSENCRYPT_EMAIL=admin@lafuentedanel.com
+      - LETSENCRYPT_HOST=api.hyruleshop.jesuscabado.com
+      - LETSENCRYPT_EMAIL=admin@jesuscabado.com
     expose:
       - 3000
     depends_on:
@@ -35,14 +35,14 @@ services:
       - ./back:/usr/src/app
       - exclude:/usr/src/app/node_modules/
   react:
-    image : nginx:alpine
+    image: nginx:alpine
     container_name: react-egames
     restart: always
     environment:
-      - VIRTUAL_HOST=egames.lafuentedanel.com
+      - VIRTUAL_HOST=hyruleshop.jesuscabado.com
       - VIRTUAL_PORT=80
-      - LETSENCRYPT_HOST=egames.lafuentedanel.com
-      - LETSENCRYPT_EMAIL=admin@lafuentedanel.com
+      - LETSENCRYPT_HOST=hyruleshop.jesuscabado.com
+      - LETSENCRYPT_EMAIL=admin@jesuscabado.com
     expose:
       - 80
     depends_on:
@@ -51,7 +51,7 @@ services:
       - egames
       - proxy
     volumes:
-      - /home/ubuntu/egames:/usr/share/nginx/html:ro
+      - /home/ubuntu/hyruleshop:/usr/share/nginx/html:ro
 volumes:
   exclude:
 networks:

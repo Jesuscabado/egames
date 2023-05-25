@@ -35,7 +35,7 @@ authRouter.get(
       { expiresIn: "12h" }
     );
     res.redirect(
-      `https://egames.lafuentedanel.com/login?token=${token}&id=${user.iduser}`
+      `https://hyruleshop.jesuscabado.com/login?token=${token}&id=${user.iduser}`
     );
   }
 );
