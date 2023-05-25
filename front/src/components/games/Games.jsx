@@ -39,7 +39,7 @@ const Games = ({ refTo }) => {
 
   const getData = async () => {
     const response = await Axios.get(
-      "https://api.hyruleshop.jesuscabado.com/api/games"
+      "http://api.hyruleshop.jesuscabado.com/api/games"
     );
     console.log(response);
     setGames(response.data);

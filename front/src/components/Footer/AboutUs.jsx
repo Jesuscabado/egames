@@ -45,7 +45,7 @@ const AboutUs = () => {
           </a>
           <h3>Ander Garcia</h3>
           <p>
-            Conocido por sus habilidades prodigiosas con el teclado, Juan es
+            Conocido por sus habilidades prodigiosas con el teclado, Ander es
             capaz de escribir líneas de código más rápido que una bala de plasma
             en un videojuego de ciencia ficción. Su destreza en el desarrollo
             web fullstack es tan asombrosa que parece tener un poder mágico para
@@ -87,7 +87,7 @@ const AboutUs = () => {
           </a>
           <h3>Jesús Cabado</h3>&nbsp;
           <p>
-            es un auténtico mago cuando se trata de implementar funcionalidades
+            Es un auténtico mago cuando se trata de implementar funcionalidades
             en los videojuegos. Sus poderes de resolución de problemas son
             inigualables, y puede convertir incluso las ideas más descabelladas
             en características de juego reales. No importa si se trata de un

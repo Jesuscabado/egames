@@ -14,7 +14,7 @@ const Register = () => {
   const getData = async (email, password) => {
     try {
       const response = await Axios.post(
-        "https://api.hyruleshop.jesuscabado.com/api/users/register",
+        "http://api.hyruleshop.jesuscabado.com/api/users/register",
         {
           email,
           password,
@@ -81,7 +81,7 @@ const Register = () => {
           <button type="submit">Registrarse</button>
         </form>
         <p>{requestError}</p>
-        <a href="https://api.hyruleshop.jesuscabado.com/api/auth/google">
+        <a href="http://api.hyruleshop.jesuscabado.com/api/auth/google">
           Registrarse con Google
         </a>
       </div>

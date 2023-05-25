@@ -21,7 +21,7 @@ const Profile = () => {
       }
       const token = JSON.parse(infoUser).token;
       const response = await axios.get(
-        "https://api.hyruleshop.jesuscabado.com/api/users/id",
+        "http://api.hyruleshop.jesuscabado.com/api/users/id",
 
         {
           headers: { "x-access-token": token },
@@ -48,7 +48,7 @@ const Profile = () => {
       }
       const token = JSON.parse(infoUser).token;
       const response = await axios.post(
-        "https://api.hyruleshop.jesuscabado.com/api/users/info",
+        "http://api.hyruleshop.jesuscabado.com/api/users/info",
         {
           name: e.target.name.value,
           lastname: e.target.lastname.value,
@@ -80,7 +80,7 @@ const Profile = () => {
       }
       const token = JSON.parse(infoUser).token;
       const response = await axios.put(
-        "https://api.hyruleshop.jesuscabado.com/api/users/edit",
+        "http://api.hyruleshop.jesuscabado.com/api/users/edit",
         {
           name: e.target.name.value,
           lastname: e.target.lastname.value,
